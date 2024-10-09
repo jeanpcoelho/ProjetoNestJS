@@ -3,6 +3,7 @@ generator client {
 }
 
 //O uso do sqlite se deve a praticidade em nao precisar instalar nada na maquina o bd fica na memoria da aplicaçao 
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
