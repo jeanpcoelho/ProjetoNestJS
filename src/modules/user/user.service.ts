@@ -1,12 +1,9 @@
-import {
-    ConflictException,
-    Injectable,
-    NotFoundException,
+import { ConflictException,Injectable, NotFoundException,
   } from "@nestjs/common";
-  import { UsersRepositoryService } from "./repositories/user-repository.service";
-  import { CreateUsersDTO } from "./dtos/create-userDTO";
+  import { UserRepositoryService } from "./repositories/user-repository.service";
+  import { CreateUserDTO } from "./dtos/create-userDTO";
   import { User } from "@prisma/client";
-  import { UpdateUsersDTO } from "./dtos/update-userDTO";
+  import { UpdateUserDTO } from "./dtos/update-userDTO";
   import * as bcrypt from "bcrypt";
   
 
@@ -22,7 +19,7 @@ export class UserService {
     city,
     role,
     isActive,
-  }: CreateUsersDTO): Promise<User> {
+  }: CreateUserDTO): Promise<User> {
     // Verifica se já existe um usuário com o mesmo e-mail
     const userByEmail = await this.userRepository.findByEmail(email);
     if (userByEmail) {
@@ -52,7 +49,7 @@ export class UserService {
     return user; 
   }
 
-  async update(id: number, updateData: UpdateUsersDTO): Promise<User> {
+  async update(id: number, updateData: UpdateUserDTO): Promise<User> {
     // Verifica se o usuário existe
     const userExists = await this.userRepository.findById(id);
     if (!userExists) {
