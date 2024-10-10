@@ -1,11 +1,11 @@
-import { PrismaClient, User } from "@prisma/client";
-import { CreateUserDTO } from "../dtos/create-userDTO";
-import { UpdateUserDTO } from "d:/Documentos/CloneGit/nestjs-prisma/src/user/dtos/update-userDTO";
+import { PrismaClient, Users } from "@prisma/client";
+import { CreateUsersDTO } from "../dtos/create-usersDTO";
+import { UpdateUsersDTO } from "d:/Documentos/CloneGit/nestjs-prisma/src/users/dtos/update-usersDTO";
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "src/prisma/prisma.service";
 
 @Injectable()
-export class UserRepositoryService {
+export class UsersRepositoryService {
   constructor(private readonly prisma: PrismaService) {}
   async create({
     name,
@@ -15,8 +15,8 @@ export class UserRepositoryService {
     city,
     role,
     isActive,
-  }: CreateUserDTO): Promise<User> {
-    const user = await this.prisma.user.create({
+  }: CreateUsersDTO): Promise<Users> {
+    const user = await this.prisma.users.create({
       data: {
         email,
         name,
@@ -40,10 +40,10 @@ export class UserRepositoryService {
       },
     });
 
-    return user as User;
+    return user as Users;
   }
 
-  async findAll(): Promise<User[] | null> {
+  async findAll(): Promise<Users[] | null> {
     const user = await this.prisma.user.findMany({
       select: {
         id: true,
@@ -58,14 +58,14 @@ export class UserRepositoryService {
         isActive: true,
       },
     });
-    return user as User[];
+    return user as Users[];
   }
 
   async update(
     userId: number,
-    { name, phone, city, isActive }: UpdateUserDTO,
-  ): Promise<User> {
-    const user = await this.prisma.user.update({
+    { name, phone, city, isActive }: UpdateUsersDTO,
+  ): Promise<Users> {
+    const user = await this.prisma.users.update({
       where: {
         id: userId,
       },
@@ -77,10 +77,10 @@ export class UserRepositoryService {
       },
     });
 
-    return user as User;
+    return user as Users;
   }
 
-  async delete(userId: number): Promise<User | null> {
+  async delete(userId: number): Promise<Users | null> {
     const user = await this.prisma.user.delete({
       where: {
         id: userId,
@@ -89,7 +89,7 @@ export class UserRepositoryService {
 
     return user;
   }
-  async findById(userId: number): Promise<User | null> {
+  async findById(userId: number): Promise<Users | null> {
     const user = await this.prisma.user.findUnique({
       where: {
         id: userId,
@@ -107,30 +107,30 @@ export class UserRepositoryService {
         isActive: true,
       },
     });
-    return user as User;
+    return user as Users;
   }
-  async findByEmail(email: string): Promise<User | null> {
+  async findByEmail(email: string): Promise<Users | null> {
     const user = await this.prisma.user.findUnique({
       where: {
         email: email,
       },
     });
-    return user as User;
+    return user as Users;
   }
 
-  async findByPhone(phone: string): Promise<User | null> {
+  async findByPhone(phone: string): Promise<Users | null> {
     const user = await this.prisma.user.findFirst({
       where: {
         phone: phone,
       },
     });
-    return user as User;
+    return user as Users;
   }
 
   async findEmailAndPassword(
     email: string,
     password: string,
-  ): Promise<User | null> {
+  ): Promise<Users | null> {
     const user = await this.prisma.user.findFirst({
       where: {
         email,
@@ -150,10 +150,10 @@ export class UserRepositoryService {
       },
     });
 
-    return user as User;
+    return user as Users;
   }
 
-  async updatePassword(userId: number, password: string): Promise<User> {
+  async updatePassword(userId: number, password: string): Promise<Users> {
     const user = await this.prisma.user.update({
       where: {
         id: userId,
@@ -163,6 +163,6 @@ export class UserRepositoryService {
       },
     });
 
-    return user as User;
+    return user as Users;
   }
 }

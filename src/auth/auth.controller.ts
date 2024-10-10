@@ -6,7 +6,7 @@ import { AuthRegisterDTO } from "./dto/auth-register.dto";
 import { AuthForgotDTO } from "./dto/auth-forgot.dto";
 import { AuthResetDTO } from "./dto/auth-reset.dto";
 import { AuthGuard } from "./guards/auth.guard";
-import { User } from "src/user/decorators/user.decorator";
+import { User } from "src/users/decorators/user.decorator";
 
 @ApiTags("auth")
 @Controller("auth")
