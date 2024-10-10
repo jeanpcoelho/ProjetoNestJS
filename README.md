@@ -4,12 +4,12 @@ Projeto em desenvolvimento /incompleto
 
 Esta atividade consiste na criação de um projeto backend usando o framework NestJS, com código fonte em TypeScript, e ORM Prisma. As rotas devem ser implementadas conforme planilha em anexo. O modelo do banco de dados também se encontra em anexo: Imagem + modelo. Apesar do modelo ter sido desenvolvido com uso da ferramenta  MySQL Workbench, o ORM Prisma do projeto deve ser configurado com o Postgres. 
 
-IDE:
+# IDE:
 
 Visual Studio Code
 
 
-tecnologias utilizadas: 
+# tecnologias utilizadas: 
 
 
 NestJS
@@ -26,9 +26,9 @@ SQLite
 
 ## Passo a passo para a criação deste projeto
 
-1.Abrir Prompt de Comando do Node (NodeJS command prompt)
+1.Abrir Prompt de Comando do Node (NodeJS command prompt).
 
-2.Instalar o Nestjs/cli na máquina
+2.Instalar o Nestjs/cli na máquina.
 ```bash
 $ npm install -g @nestjs/cli
 ```
@@ -41,7 +41,7 @@ $ npm install -g @nestjs/cli
 $ nest new nest-messages
 
 ```
-Obs: caso utilizar o terminal do visual studio code para instalaçao escolha o gerenciador de pacotes npm
+Obs: caso utilizar o terminal do visual studio code para instalaçao escolha o gerenciador de pacotes npm.
 
 
 ## Criar o módulo principal do sistema (MessagesModule). Execute o comando a seguir dentro da pasta criada no passo anterior.
@@ -87,12 +87,12 @@ $ npm install class-validator class-transformer
 
 
 ## Pacotes/Dependecias ultilizados 
-Para a instalaçao dos mesmo abra o terminal e digite o comando que a cada um se refere 
+Para a instalaçao dos mesmo abra o terminal e digite o comando que a cada um se refere .
 
 
 Obs: Atente-se de instalar dentro da pasta do projeto
 
-# nestjs/swagger
+# NestJS/swagger
 Facilita a criação de documentação da API ,permitindo visualizar e interagir com as APIs RESTful de maneira intuitiva.
 ```bash
 $ npm install --save @nestjs/swagger
