@@ -10,7 +10,7 @@ Esta atividade consiste na criação de um projeto backend usando o framework Ne
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) fProjeto de exemplo usando o framework Nest.
 
 ## Project setup
 
