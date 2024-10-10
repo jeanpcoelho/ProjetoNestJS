@@ -4,11 +4,19 @@ Projeto em desenvolvimento /incompleto
 
 Esta atividade consiste na criação de um projeto backend usando o framework NestJS, com código fonte em TypeScript, e ORM Prisma. As rotas devem ser implementadas conforme planilha em anexo. O modelo do banco de dados também se encontra em anexo: Imagem + modelo. Apesar do modelo ter sido desenvolvido com uso da ferramenta  MySQL Workbench, o ORM Prisma do projeto deve ser configurado com o Postgres. 
 
+IDE:
+
+Visual Studio Code
 
 
+tecnologias utilizadas: 
 
 
-## Description
+NestJS
+Prisma
+SQLite
+
+## Descriçao
 
 [Nest](https://github.com/nestjs/nest) Projeto de exemplo usando o framework Nest.
 
@@ -16,18 +24,21 @@ Esta atividade consiste na criação de um projeto backend usando o framework Ne
 
 1.Abrir Prompt de Comando do Node (NodeJS command prompt)
 
-2.Instalar o Nest na máquina
+2.Instalar o Nestjs/cli na máquina
 ```bash
-$ npm install
+$ npm install -g @nestjs/cli
 ```
 
-# Criar projeto chamado nest-messages. Execute o comando a seguir dentro da pasta de sua preferência.
+
+## Criar projeto chamado nest-messages. Execute o comando a seguir dentro da pasta de sua preferência.
 
 ```bash
 
 $ nest new nest-messages
 
 ```
+Obs: caso utilizar o terminal do visual studio code para instalaçao escolha o gerenciador de pacotes npm
+
 
 ## Criar o módulo principal do sistema (MessagesModule). Execute o comando a seguir dentro da pasta criada no passo anterior.
 
@@ -67,6 +78,28 @@ $ npm install class-validator class-transformer
 ```
 
 
+## Pacotes/Dependecias ultilizados 
+Para a instalaçao dos mesmo abra o terminal e digite o comando que a cada um se refere 
+
+
+Obs: Atente-se de instalar dentro da pasta do projeto
+
+# nestjs/swagger
+facilita a criação de documentação da API ,permitindo visualizar e interagir com as APIs RESTful de maneira intuitiva.
+```bash
+$ npm install --save @nestjs/swagger
+```
+
+# NestJS JWT (JSON Web Token)
+cria um token que pode ser usado para verificar a identidade de um usuário após o login.
+
+```bash
+$ nest g module auth
+$ nest g controller auth
+$ nest g service auth
+$ nest g module users
+$ nest g service users
+```
 
 
 ## Referencias:
