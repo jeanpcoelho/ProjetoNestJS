@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { PrismaClient, User } from "@prisma/client";
 import { CreateUserDTO } from "../dtos/create-userDTO";
-import { UpdateUserDTO } from "../dtos/update-userDTO";
+import { UpdateUserDTO } from "d:/Documentos/CloneGit/nestjs-prisma/src/user/dtos/update-userDTO";
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "src/prisma/prisma.service";
 
