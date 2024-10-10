@@ -13,7 +13,11 @@ tecnologias utilizadas:
 
 
 NestJS
+
+
 Prisma
+
+
 SQLite
 
 ## Descriçao
@@ -63,7 +67,11 @@ messages/messages indica para criar MessagesController dentro da pasta messages
 ## Definir as assinaturas das rotas dentro do controller
 
 localhost:3000/messages (GET)
+
+
 localhost:3000/messages (POST)
+
+
 localhost:3000/messages/:id (GET)
 
 ## Instalar/Configurar a API client de sua preferência (Postman, Insomnia, VSCode REST extension, ...)
@@ -85,13 +93,13 @@ Para a instalaçao dos mesmo abra o terminal e digite o comando que a cada um se
 Obs: Atente-se de instalar dentro da pasta do projeto
 
 # nestjs/swagger
-facilita a criação de documentação da API ,permitindo visualizar e interagir com as APIs RESTful de maneira intuitiva.
+Facilita a criação de documentação da API ,permitindo visualizar e interagir com as APIs RESTful de maneira intuitiva.
 ```bash
 $ npm install --save @nestjs/swagger
 ```
 
 # NestJS JWT (JSON Web Token)
-cria um token que pode ser usado para verificar a identidade de um usuário após o login.
+Fria um token que pode ser usado para verificar a identidade de um usuário após o login.
 
 ```bash
 $ nest g module auth
@@ -103,7 +111,13 @@ $ nest g service users
 
 
 ## Referencias:
+https://github.com/leonardo-silva/nest-messages/tree/main
+
+
 https://www.youtube.com/watch?v=0Idug0e9tPw
+
+
+https://www.youtube.com/watch?v=nuLTwqPNq-w
 
 ## License
 
