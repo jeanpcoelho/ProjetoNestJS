@@ -8,7 +8,7 @@ import {
   IsStrongPassword,
   Matches,
 } from "class-validator";
-import { Role } from "../enums/role.enum";
+import { Role } from "D:/Documentos/CloneGit/nestjs-prisma/src/user/enums/role.enum";
 
 export class CreateUserDTO {
   @ApiProperty({
