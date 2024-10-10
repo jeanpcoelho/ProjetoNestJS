@@ -10,11 +10,13 @@ Esta atividade consiste na criação de um projeto backend usando o framework Ne
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) fProjeto de exemplo usando o framework Nest.
+[Nest](https://github.com/nestjs/nest) Projeto de exemplo usando o framework Nest.
 
-## Project setup
-
+## Passo a passo para a criação deste projeto
 ```bash
+1.Abrir Prompt de Comando do Node (NodeJS command prompt)
+
+2.Instalar o Nest na máquina
 $ npm install
 ```
 
