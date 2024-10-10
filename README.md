@@ -21,53 +21,56 @@ Esta atividade consiste na criação de um projeto backend usando o framework Ne
 $ npm install
 ```
 
-## Compile and run the project
+## Criar projeto chamado nest-messages. Execute o comando a seguir dentro da pasta de sua preferência.
 
 ```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
+$ nest new nest-messages
 
-# production mode
-$ npm run start:prod
 ```
 
-## Run tests
+## Criar o módulo principal do sistema (MessagesModule). Execute o comando a seguir dentro da pasta criada no passo anterior.
 
 ```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+$ nest generate module messages
 
-# test coverage
-$ npm run test:cov
+```
+ Verifique se o arquivo src/messages/messages.module.ts foi criado
+ Atualize a referência para o novo módulo dentro de main.ts
+
+## criar controller com o seguinte comando:
+```bash
+$ nest generate controller messages/messages --flat
+
+```
+messages/messages indica para criar MessagesController dentro da pasta messages
+
+--flat (opcional) indica para não criar um diretório separado para o controller. Você provavelmente irá querer um diretório separado em projetos maiores.
+
+
+## Definir as assinaturas das rotas dentro do controller
+
+localhost:3000/messages (GET)
+localhost:3000/messages (POST)
+localhost:3000/messages/:id (GET)
+
+## Instalar/Configurar a API client de sua preferência (Postman, Insomnia, VSCode REST extension, ...)
+
+Criar classe descrevendo as propriedades que o corpo da requisição deve ter. (Data Transfer Object - DTO). New file: src/messages/dtos/create-message.dto.ts
+
+
+Adicionar regras de validação na classe. É necessário instalar pacotes adicionais:
+
+```bash
+$ npm install class-validator class-transformer
 ```
 
-## Resources
 
-Check out a few resources that may come in handy when working with NestJS:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Referencias:
+https://www.youtube.com/watch?v=0Idug0e9tPw
 
 ## License
 
@@ -75,4 +78,3 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
 
 
-Referencias:https://www.youtube.com/watch?v=0Idug0e9tPw
