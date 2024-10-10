@@ -4,6 +4,7 @@ import { AppService } from "./app.service";
 import { UserModule } from "./user/user.module"; 
 import { AuthModule } from "./auth/auth.module"; 
 import { ConfigModule } from "@nestjs/config";
+import { AuthModule } from './auth/auth.module';
 //módulo principal da aplicação NestJS
 @Module({
   imports: [
@@ -11,7 +12,7 @@ import { ConfigModule } from "@nestjs/config";
     forwardRef(() => AuthModule), 
     ConfigModule.forRoot({ 
       isGlobal: true, 
-    }),
+    }), AuthModule,
   ],
   //gerencia as rotas da aplicação
   controllers: [AppController], 
