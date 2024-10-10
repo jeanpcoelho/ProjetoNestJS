@@ -7,7 +7,7 @@ import {
   import { User } from "@prisma/client";
   import { UserRepositoryService } from "src/user/repositories/users-repository.service";
   import { AuthRegisterDTO } from "./dto/auth-register.dto";
-  import { UserService } from "src/user/user.service";
+  import { UsersService } from "src/users/users.service";
   import * as bcrypt from "bcrypt";
   
   @Injectable()
@@ -16,7 +16,7 @@ import {
     constructor(
       private readonly jwtService: JwtService,
       private readonly usersRepository: UserRepositoryService,
-      private readonly usersService: UserService,
+      private readonly usersService: UsersService,
     ) {}
   
     createToken(user: User) {
