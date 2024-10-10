@@ -21,7 +21,7 @@ Esta atividade consiste na criação de um projeto backend usando o framework Ne
 $ npm install
 ```
 
-## Criar projeto chamado nest-messages. Execute o comando a seguir dentro da pasta de sua preferência.
+# Criar projeto chamado nest-messages. Execute o comando a seguir dentro da pasta de sua preferência.
 
 ```bash
 
