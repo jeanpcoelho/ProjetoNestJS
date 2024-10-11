@@ -4,6 +4,8 @@ Atividade Backend: Projeto NestJS - TS - Prisma
 
 Disciplina: POO2
 
+Alunos:Jean Pereira Coelho
+
 Esta atividade consiste na criação de um projeto backend usando o framework NestJS, com código fonte em TypeScript, e ORM Prisma. As rotas devem ser implementadas conforme planilha em anexo. O modelo do banco de dados também se encontra em anexo: Imagem + modelo. Apesar do modelo ter sido desenvolvido com uso da ferramenta  MySQL Workbench, o ORM Prisma do projeto deve ser configurado com o Postgres. 
 
 ### IDE:
@@ -100,7 +102,7 @@ $ npm install --save @nestjs/swagger
 ```
 
 ### NestJS JWT (JSON Web Token)
-Fria um token que pode ser usado para verificar a identidade de um usuário após o login.
+Cria um token que pode ser usado para verificar a identidade de um usuário após o login.
 
 ```bash
 $ nest g module auth
@@ -109,8 +111,12 @@ $ nest g service auth
 $ nest g module users
 $ nest g service users
 ```
+### bcrypt
+biblioteca que cria hash para proteger senhas
 
-
+```bash
+$ npm install bcrypt
+```
 ### Referencias:
 https://github.com/leonardo-silva/nest-messages/tree/main
 
