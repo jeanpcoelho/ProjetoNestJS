@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersRepositoryModule = void 0;
 const common_1 = require("@nestjs/common");
-const users_repository_service_1 = require("./users-repository.service");
+const users_repository_service_1 = require("D:/Documentos/CloneGit/nestjs-prisma/src/users/repositories/users-repository.service");
 const prisma_module_1 = require("../../../prisma/prisma.module");
 let UsersRepositoryModule = class UsersRepositoryModule {
 };
