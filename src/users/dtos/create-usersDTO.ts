@@ -10,7 +10,7 @@ import {
 } from "class-validator";
 import { Role } from "D:/Documentos/CloneGit/nestjs-prisma/src/users/enums/role.enum";
 
-export class CreateUserDTO {
+export class CreateUsersDTO {
   @ApiProperty({
     example: "dev",
   })

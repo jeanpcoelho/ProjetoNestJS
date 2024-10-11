@@ -1,11 +1,8 @@
-import {
-    BadRequestException,
-    Injectable,
-    UnauthorizedException,
+import { BadRequestException, Injectable,  UnauthorizedException,
   } from "@nestjs/common";
   import { JwtService } from "@nestjs/jwt";
-  import { User } from "@prisma/client";
-  import { UserRepositoryService } from "src/user/repositories/users-repository.service";
+  import { Users } from "@prisma/client";
+  import { UsersRepositoryService } from "src/users/repositories/users-repository.service";
   import { AuthRegisterDTO } from "./dto/auth-register.dto";
   import { UsersService } from "src/users/users.service";
   import * as bcrypt from "bcrypt";
@@ -15,11 +12,11 @@ import {
     private issuer = "login";
     constructor(
       private readonly jwtService: JwtService,
-      private readonly usersRepository: UserRepositoryService,
+      private readonly usersRepository: UsersRepositoryService,
       private readonly usersService: UsersService,
     ) {}
   
-    createToken(user: User) {
+    createToken(user: Users) {
       return {
         accessToken: this.jwtService.sign(
           {

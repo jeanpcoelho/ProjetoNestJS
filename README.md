@@ -2,7 +2,7 @@
 
 Atividade Backend: Projeto NestJS - TS - Prisma
 
-Disciplina:POO2
+Disciplina: POO2
 
 Esta atividade consiste na criação de um projeto backend usando o framework NestJS, com código fonte em TypeScript, e ORM Prisma. As rotas devem ser implementadas conforme planilha em anexo. O modelo do banco de dados também se encontra em anexo: Imagem + modelo. Apesar do modelo ter sido desenvolvido com uso da ferramenta  MySQL Workbench, o ORM Prisma do projeto deve ser configurado com o Postgres. 
 
@@ -19,7 +19,7 @@ NestJS
 Prisma
 
 
-SQLite
+MySQL
 
 ### Descriçao
 

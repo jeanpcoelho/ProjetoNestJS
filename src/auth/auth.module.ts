@@ -1,6 +1,6 @@
 import { Module, forwardRef } from "@nestjs/common";
 import { JwtModule } from "@nestjs/jwt";
-import { UserRepositoryModule } from "src/user/repositories/users-repository.module";
+import { UsersRepositoryModule } from "src/users/repositories/users-repository.module";
 import { UsersModule } from "src/users/users.module";
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
@@ -11,7 +11,7 @@ import { AuthService } from "./auth.service";
       secret: process.env.JWT_SECRET,
     }),
     forwardRef(() => UsersModule), 
-    UserRepositoryModule,
+    UsersRepositoryModule,
   ],
   controllers: [AuthController],
   providers: [AuthService],

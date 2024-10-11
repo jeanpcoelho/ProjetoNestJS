@@ -16,7 +16,7 @@ export class UsersRepositoryService {
     role,
     isActive,
   }: CreateUsersDTO): Promise<Users> {
-    const user = await this.prisma.users.create({
+    const users = await this.prisma.users.create({
       data: {
         email,
         name,
@@ -44,7 +44,7 @@ export class UsersRepositoryService {
   }
 
   async findAll(): Promise<Users[] | null> {
-    const user = await this.prisma.user.findMany({
+    const users = await this.prisma.users.findMany({
       select: {
         id: true,
         name: true,
@@ -81,7 +81,7 @@ export class UsersRepositoryService {
   }
 
   async delete(userId: number): Promise<Users | null> {
-    const user = await this.prisma.user.delete({
+    const user = await this.prisma.users.delete({
       where: {
         id: userId,
       },
@@ -90,7 +90,7 @@ export class UsersRepositoryService {
     return user;
   }
   async findById(userId: number): Promise<Users | null> {
-    const user = await this.prisma.user.findUnique({
+    const user = await this.prisma.users.findUnique({
       where: {
         id: userId,
       },
@@ -110,7 +110,7 @@ export class UsersRepositoryService {
     return user as Users;
   }
   async findByEmail(email: string): Promise<Users | null> {
-    const user = await this.prisma.user.findUnique({
+    const user = await this.prisma.users.findUnique({
       where: {
         email: email,
       },
@@ -119,7 +119,7 @@ export class UsersRepositoryService {
   }
 
   async findByPhone(phone: string): Promise<Users | null> {
-    const user = await this.prisma.user.findFirst({
+    const user = await this.prisma.users.findFirst({
       where: {
         phone: phone,
       },
@@ -131,7 +131,7 @@ export class UsersRepositoryService {
     email: string,
     password: string,
   ): Promise<Users | null> {
-    const user = await this.prisma.user.findFirst({
+    const user = await this.prisma.users.findFirst({
       where: {
         email,
         password,
@@ -154,7 +154,7 @@ export class UsersRepositoryService {
   }
 
   async updatePassword(userId: number, password: string): Promise<Users> {
-    const user = await this.prisma.user.update({
+    const user = await this.prisma.users.update({
       where: {
         id: userId,
       },
