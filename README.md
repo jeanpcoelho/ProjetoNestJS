@@ -1,5 +1,5 @@
 ### Projeto em desenvolvimento /incompleto
-poucos erros aparente ao integrar ao BD , possivelmente versaor do nodejs em conflito a ser analisado 
+poucos erros aparente ao integrar ao BD , possivelmente versaor do nodejs em conflito, algo a ser analisado 
 
 Atividade Backend: Projeto NestJS - TS - Prisma
 
